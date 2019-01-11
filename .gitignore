@@ -1,0 +1,9 @@
+# node js modules
+node_modules/
+
+# auto generated
+dist/
+build/
+
+# materials src
+mat/
