@@ -29,25 +29,86 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg)$/,
-                exclude: /fonts/,
+                include: /img/,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
                             name: '[path][name].[ext]?[hash]',
-                            limit: 8192,
+                            limit: 4096,
                             outputPath: (path) => {
-                                if (!path) 
-                                    throw new Error('[file-loader] Image path is not defined.')
+                                if (!path)
+                                    throw new Error('[url-loader] Image path is not defined.')
                                 return path.replace(/src\//, '');
                             }
                         }
-                    }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                //quality: 65
+                                quality: 10
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                //quality: '65-90',
+                                quality: '10-20',
+                                speed: 4
+                            },
+                        }
+                    },
+                ]
+            },
+            {
+                test: /\.(png|jpg)$/,
+                include: /webp/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: '[path][name].webp?[hash]',
+                            limit: 4096,
+                            outputPath: (path) => {
+                                if (!path)
+                                    throw new Error('[url-loader] Image path is not defined.')
+                                return path.replace(/src\//, '').replace(/webp/, 'img');
+                            }
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                //quality: 65
+                                quality: 25
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                //quality: '65-90',
+                                quality: '20-30',
+                                speed: 4
+                            },
+                            // the webp option will enable WEBP
+                            webp: {
+                                //quality: 75
+                                quality: 25
+                            }
+                        }
+                    },
                 ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-                exclude: /img/,
+                include: /fonts/,
                 use: [
                     {
                         loader: 'url-loader',
