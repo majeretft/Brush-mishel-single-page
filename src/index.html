@@ -15,21 +15,51 @@
 
 
     <header>
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <nav class="nav">
-                    <a class="nav-link" href="http://hozmetla.ru">&larr; к сайту</a>
-                </nav>
-                <nav class="nav">
-                    <a class="nav-link" href="tel:99999999999">+9 999 999 9999</a>
-                    <a class="nav-link" href="mailto:email@email.com">email@email.com</a>
-                </nav>
-            </div>
+        <div class="container px-0">
+            <nav class="nav justify-content-between py-1">
+                <a href="http://hozmetla.ru" class="nav-link d-flex align-items-center">&larr; к сайту</a>
+                <div class="text-right">
+                    <a class="nav-link py-1 line-h-1-15" href="tel:99999999999">+9 999 999 9999</a>
+                    <a class="nav-link py-1 line-h-1-15" href="mailto:email@email.com">email@email.com</a>
+                </div>
+            </nav>
         </div>
     </header>
 
 
     <main>
+        <div class="bg-dark py-3">
+            <div class="container">
+                <h1 class="text-center text-uppercase text-light font-weight-light mb-4">
+                    новая модель метлы
+                    <br>
+                    <small class="text-orange">метла &laquo;мишель&raquo;</small>
+                </h1>
+                <div class="d-flex justify-content-center mb-4">
+                    <ul class="lead text-light">
+                        <li>Для уборки на улице</li>
+                        <li>Для уборки в помещении</li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <span class="icon-right-open-big text-orange h3"></span>
+                    <span class="lead text-light text-uppercase px-2 text-center"><b>производство</b><br><b>опт</b></span>
+                    <span class="icon-left-open-big text-orange h3"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-light py-3">
+            <div class="container">
+                <picture>
+                    <img src="<%= require('./img/metla-mishel-2-modifikacii-400w.jpg') %>" class="img-fluid" alt="Фотография двух видов метлы Мишель">
+                </picture>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- <main>
 
         <div class="bg-dark">
             <div class="container">
@@ -229,7 +259,7 @@
             <div class="text-muted text-center py-1">&copy; 1997-2019 ООО &laquo;Центр ВТО&raquo;</div>
         </div>
 
-    </footer>
+    </footer> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
