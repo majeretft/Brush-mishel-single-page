@@ -46,16 +46,24 @@ module.exports = {
                         loader: 'image-webpack-loader',
                         options: {
                             mozjpeg: {
+                                enabled: true,
                                 progressive: true,
-                                quality: 65
+                                quality: 85
                             },
-                            // optipng.enabled: false will disable optipng
                             optipng: {
                                 enabled: false,
                             },
                             pngquant: {
-                                quality: '65-90',
-                                speed: 4
+                                enabled: true,
+                                quality: '65-80',
+                                speed: 4,
+                                strip: true,
+                            },
+                            svgo: {
+                                enabled: true,
+                            },
+                            gifsicle: {
+                                enabled: false,
                             },
                         }
                     },
@@ -79,21 +87,13 @@ module.exports = {
                     {
                         loader: 'image-webpack-loader',
                         options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 65
-                            },
-                            // optipng.enabled: false will disable optipng
-                            optipng: {
-                                enabled: false,
-                            },
-                            pngquant: {
-                                quality: '65-90',
-                                speed: 4
-                            },
-                            // the webp option will enable WEBP
+                            mozjpeg: { enabled: false },
+                            optipng: { enabled: false },
+                            pngquant: { enabled: false },
+                            svgo: { enabled: false },
+                            gifsicle: { enabled: false },
                             webp: {
-                                quality: 75
+                                quality: 85
                             }
                         }
                     },
