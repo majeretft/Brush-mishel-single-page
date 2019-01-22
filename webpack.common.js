@@ -2,6 +2,17 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const isProd = process.env.NODE_ENV === 'production';
+const minifyCfg = {
+    collapseWhitespace: true,
+    removeComments: true,
+    removeRedundantAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    useShortDoctype: true
+};
+const minify = isProd ? minifyCfg : false;
+
 module.exports = {
     entry: {
         main: path.resolve(__dirname, 'index.js')
@@ -11,16 +22,21 @@ module.exports = {
             {
                 test: /\.(scss)$/,
                 use: [{
-                    loader: 'style-loader', // inject CSS to page
+                    loader: isProd
+                        ? MiniCssExtractPlugin.loader
+                        : 'style-loader', // inject CSS to page
                 }, {
                     loader: 'css-loader', // translates CSS into CommonJS modules
                 }, {
                     loader: 'postcss-loader', // Run postcss actions
                     options: {
                         plugins: function () { // postcss plugins, can be exported to postcss.config.js
-                            return [
-                                require('autoprefixer')
-                            ];
+                            let p = [require('autoprefixer')];
+
+                            if (isProd)
+                                p.push(require('cssnano'));
+
+                            return p;
                         }
                     }
                 }, {
@@ -117,7 +133,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ filename: 'index.html', template: './src/index.html', hash: true }),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: './src/index.html',
+            hash: true,
+            minify: minify
+        }),
         new MiniCssExtractPlugin({ filename: '[name].bundle.css' }),
     ],
 }
