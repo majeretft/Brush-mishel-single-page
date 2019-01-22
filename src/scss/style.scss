@@ -6,6 +6,7 @@ $b-lg: 992px;
 $b-md: 768px;
 $b-sm: 576px;
 $col-padding: 15px;
+$blue: rgb(12, 112, 170);
 
 .text-russian-display {
     font-family: 'Ruslan Display', cursive;
@@ -16,7 +17,7 @@ $col-padding: 15px;
 }
 
 .text-blue {
-    color: rgb(12, 112, 170);
+    color: $blue;
 }
 
 .text-stroke {
@@ -60,14 +61,32 @@ $col-padding: 15px;
     font-size: 0.8rem;
 }
 
-.bg-svg {
-    background-image: url(../img/header-xl.svg);
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 55% 100%;
+.vr {
+    padding-left: $col-padding;
+    padding-right: $col-padding;
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+html,
+body {
+    min-height: 100vh;
 }
 
 @media (min-width: $b-lg) {
+    .bg-svg {
+        background-image: linear-gradient(to right, $blue 0%, $blue 35%, transparent 35%, transparent 100%);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: auto auto;
+
+        > .container {
+            background-image: linear-gradient(to right, $blue 0%, $blue 40%, transparent 40%, transparent 100%), url(../img/header-xl.svg);
+            background-position: left center, 50% center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: auto auto, auto 100%;
+        }
+    }
+    
     .mod-overlay {
         position: relative;
         &:after {
@@ -85,6 +104,20 @@ $col-padding: 15px;
 }
 
 @media (min-width: $b-xl) {
+    .bg-svg {
+        background-image: linear-gradient(to right, $blue 0%, $blue 35%, transparent 35%, transparent 100%);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: auto auto;
+
+        > .container {
+            background-image: linear-gradient(to right, $blue 0%, $blue 42%, transparent 42%, transparent 100%), url(../img/header-xl.svg);
+            background-position: left center, 50% center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: auto auto, auto 100%;
+        }
+    }
+
     .mod-overlay {
         position: relative;
         &:after {
@@ -98,15 +131,4 @@ $col-padding: 15px;
             height: 100%;
         }
     }
-}
-
-.vr {
-    padding-left: $col-padding;
-    padding-right: $col-padding;
-    border-right: 1px solid rgb(224, 224, 224);
-}
-
-html,
-body {
-    min-height: 100vh;
 }

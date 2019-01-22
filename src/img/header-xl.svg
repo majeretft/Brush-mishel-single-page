@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="283.89792mm"
+   width="63.235413mm"
    height="102.65833mm"
-   viewBox="0 0 283.89792 102.65833"
+   viewBox="0 0 63.235413 102.65833"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="817.72807"
-     inkscape:cy="360.43595"
+     inkscape:zoom="1"
+     inkscape:cx="-47.232985"
+     inkscape:cy="171.2473"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,10 +57,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(328.7881,-63.011559)">
+     transform="translate(108.1256,-63.011559)">
     <path
        style="fill:#0c70aa;fill-opacity:1;stroke:none;stroke-width:0.26759291px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m -97.934983,63.011559 21.109663,52.916671 8.119101,-5.82084 23.816031,55.5625 H -328.7881 V 63.011559 Z"
+       d="m -97.934983,63.011559 21.109663,52.916671 8.119101,-5.82084 23.816031,55.5625 H -108.1256 V 63.011559 Z"
        id="path828"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccc" />
