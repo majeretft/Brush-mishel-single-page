@@ -16,13 +16,13 @@
 
     <header>
         <div class="container">
-            <nav class="d-lg-flex">
-                <a href="/" class="text-secondary text-decoration-none p-2">&larr; к сайту</a>
-                <a href="tel:79999999999" class="text-secondary text-decoration-none ml-lg-auto p-lg-2">+7 999 999 9999</a>
-                <a href="mailto:email@email.com" class="text-secondary text-decoration-none p-lg-2">email@email.com</a>
+            <nav class="d-md-flex">
+                <a href="/" class="text-secondary text-decoration-none p-md-2">&larr; к сайту</a>
+                <a href="tel:79999999999" class="text-secondary text-decoration-none ml-md-auto p-md-2">+7 999 999 9999</a>
+                <a href="mailto:email@email.com" class="text-secondary text-decoration-none p-md-2">email@email.com</a>
             </nav>
-            <div class="py-lg-5">
-                <div class="d-lg-inline-block">
+            <div class="py-md-4 py-lg-5 text-md-center text-lg-left">
+                <div class="d-md-inline-block">
                     <div class="font-size-3 text-russian-display line-height-0-8">
                         <span class="text-blue">Хоз</span><span class="text-stroke">Метла</span>
                     </div>
@@ -40,19 +40,20 @@
         <div class="bg-svg bg-light">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 d-lg-flex flex-lg-column align-items-lg-center justify-content-lg-center py-lg-5">
-                        <h1 class="text-uppercase text-lora text-center mb-lg-5 text-white">
+                    <div class="col-md-12 col-lg-6 d-md-flex flex-md-column align-items-md-center justify-content-md-center py-md-4 py-lg-5">
+                        <h1 class="text-uppercase text-lora text-center mb-md-3 mb-lg-5 text-white">
                             <small>запущено новое производство</small>
                             <br>
                             <span>метла &laquo;мишель&raquo;</span>
                         </h1>
-                        <p class="lead text-uppercase mb-lg-4 text-white">является аналогом метлы &laquo;гардена&raquo;</p>
+                        <p class="lead text-uppercase mb-md-3 mb-lg-4 text-white">является аналогом метлы
+                            &laquo;гардена&raquo;</p>
                         <ul class="lead text-uppercase text-white">
                             <li>для помещения</li>
                             <li>для улицы</li>
                         </ul>
                     </div>
-                    <div class="col-6 d-lg-flex flex-lg-column justify-content-lg-center py-lg-5">
+                    <div class="col-md-12 col-lg-6 d-md-flex align-items-md-center justify-content-md-center py-md-4 py-lg-5">
                         <picture class="mod-overlay">
                             <source srcset="" type="image/webp">
                             <img class="img-fluid" src="<%= require('./img/metla-mishel-all-600w.png') %>" alt=""
@@ -64,35 +65,37 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 py-lg-5 px-lg-0">
+                <div class="col-md-4 col-lg-4 pt-md-4 pb-md-3 py-lg-5 px-md-0">
                     <h2 class="text-uppercase text-lora text-center mb-lg-3">цена</h2>
                     <div class="vr py-lg-3">
-                        <p class="text-center font-size-1-25">
+                        <p class="text-center font-size-1-25 mb-0">
                             <small>от</small> 53 руб / шт
                             <br>
                             <small>до</small> 57 руб / шт
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 py-lg-5 px-lg-0">
+                <div class="col-md-4 col-lg-4 pt-md-4 pb-md-3 py-lg-5 px-md-0">
                     <h2 class="text-uppercase text-lora text-center mb-lg-3">упаковка</h2>
                     <div class="vr py-lg-3">
-                        <p class="text-center font-size-1-25">
+                        <p class="text-center font-size-1-25 mb-0">
                             Коробка картонная
                             <br>
                             50 штук в коробке
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 py-lg-5 px-lg-0">
+                <div class="col-md-4 col-lg-4 pt-md-4 pb-md-3 py-lg-5 px-md-0">
                     <h2 class="text-uppercase text-lora text-center mb-lg-3">контакты</h2>
                     <div class="py-lg-3">
-                        <p class="text-center font-size-1-25">
+                        <p class="text-center font-size-1-25 mb-0">
                             <a class="text-decoration-none" href="tel:79999999999"><span class="icon-phone-outline"></span>
-                                +7 999 999 9999</a>
+                                +7 999 999 9999
+                            </a>
                             <br>
                             <a class="text-decoration-none" href="mailto:email@email.com"><span class="icon-mail"></span>
-                                email@email.com</a>
+                                email@email.com
+                            </a>
                         </p>
                     </div>
                 </div>
@@ -103,8 +106,8 @@
 
     <footer>
         <div class="container">
-            <div class="text-center py-lg-3">
-                <small class="text-black-50">&copy; ООО &laquo;Центр ВТО&raquo;</small>
+            <div class="text-center py-md-2 py-lg-3">
+                <small class="text-black-50">&copy; 1997-<span id="dt"></span> ООО &laquo;Центр ВТО&raquo;</small>
             </div>
         </div>
     </footer>
@@ -116,6 +119,11 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#dt').text(new Date().getFullYear());
+        })
+    </script>
 </body>
 
 </html>
