@@ -1,3 +1,8 @@
+<% let tel = '+7 XXX XXX XXXX' %>
+<% let telAttr = '7XXXXXXXXXX' %>
+<% let email = 'e@m.com' %>
+<% let emailAttr = email %>
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -18,8 +23,8 @@
         <div class="container">
             <nav class="d-flex">
                 <a href="/" class="text-secondary text-decoration-none p-2">&larr; к сайту</a>
-                <a href="tel:79999999999" class="text-secondary text-decoration-none ml-md-auto p-md-2 d-none d-md-block">+7 999 999 9999</a>
-                <a href="mailto:email@email.com" class="text-secondary text-decoration-none p-md-2 d-none d-md-block">email@email.com</a>
+                <a href="tel:<%= telAttr %>" class="text-secondary text-decoration-none ml-md-auto p-md-2 d-none d-md-block"><%= tel %></a>
+                <a href="mailto:<%= emailAttr %>" class="text-secondary text-decoration-none p-md-2 d-none d-md-block"><%= email %></a>
             </nav>
             <div class="py-3 py-md-4 py-lg-5 text-center text-lg-left">
                 <div class="d-md-inline-block">
@@ -90,12 +95,12 @@
                     <h2 class="text-uppercase text-lora text-center mb-lg-3">контакты</h2>
                     <div class="py-lg-3">
                         <p class="text-center font-size-1-25 mb-0">
-                            <a class="text-decoration-none" href="tel:79999999999"><span class="icon-phone-outline"></span>
-                                +7 999 999 9999
+                            <a class="text-decoration-none" href="tel:<%= telAttr %>"><span class="icon-phone-outline"></span>
+                                <%= tel %>
                             </a>
                             <br>
-                            <a class="text-decoration-none" href="mailto:email@email.com"><span class="icon-mail"></span>
-                                email@email.com
+                            <a class="text-decoration-none" href="mailto:<%= emailAttr %>"><span class="icon-mail"></span>
+                                <%= email %>
                             </a>
                         </p>
                     </div>
