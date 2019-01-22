@@ -16,8 +16,10 @@
 
     <header>
         <div class="container">
-            <nav>
-                <a href="/" class="text-muted text-decoration-none">&larr; к сайту</a>
+            <nav class="d-flex">
+                <a href="/" class="text-secondary text-decoration-none p-2">&larr; к сайту</a>
+                <a href="tel:79999999999" class="text-secondary text-decoration-none ml-auto p-2">+7 999 999 9999</a>
+                <a href="mailto:email@email.com" class="text-secondary text-decoration-none p-2">email@email.com</a>
             </nav>
             <div class="py-5">
                 <div class="d-inline-block">
@@ -35,26 +37,77 @@
 
 
     <main>
+        <div class="bg-svg bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-flex flex-column align-items-center justify-content-center py-5">
+                        <h1 class="text-uppercase text-lora text-center mb-5 text-white">
+                            <small>запущено новое производство</small>
+                            <br>
+                            <span>метла &laquo;мишель&raquo;</span>
+                        </h1>
+                        <p class="lead text-uppercase mb-4 text-white">является аналогом метлы &laquo;гардена&raquo;</p>
+                        <ul class="lead text-uppercase text-white">
+                            <li>для помещения</li>
+                            <li>для улицы</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-center py-5">
+                        <picture class="mod-overlay">
+                            <source srcset="" type="image/webp">
+                            <img class="img-fluid" src="<%= require('./img/metla-mishel-all-600w.png') %>" alt=""
+                                srcset="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-6 d-flex flex-column align-items-center justify-content-center py-5">
-                    <h1 class="text-uppercase text-lora text-center mb-5">
-                        <small>запущено новое производство</small>
-                        <br>
-                        <span>метла &laquo;мишель&raquo;</span>
-                    </h1>
-                    <p class="lead text-uppercase mb-4">является аналогом метлы &laquo;гардена&raquo;</p>
-                    <ul class="lead text-uppercase">
-                        <li>для помещения</li>
-                        <li>для улицы</li>
-                    </ul>
+                <div class="col-4 py-5 px-0">
+                    <h2 class="text-uppercase text-lora text-center mb-3">цена</h2>
+                    <div class="vr py-3">
+                        <p class="text-center font-size-1-25">
+                            <small>от</small> 53 руб / шт
+                            <br>
+                            <small>до</small> 57 руб / шт
+                        </p>
+                    </div>
                 </div>
-                <div class="col-6 d-flex flex-column justify-content-center">
-                    <img class="img-fluid" src="<%= require('./img/metla-mishel-all-600w.png') %>" alt="" srcset="">
+                <div class="col-4 py-5 px-0">
+                    <h2 class="text-uppercase text-lora text-center mb-3">упаковка</h2>
+                    <div class="vr py-3">
+                        <p class="text-center font-size-1-25">
+                            Коробка картонная
+                            <br>
+                            50 штук в коробке
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 py-5 px-0">
+                    <h2 class="text-uppercase text-lora text-center mb-3">контакты</h2>
+                    <div class="py-3">
+                        <p class="text-center font-size-1-25">
+                            <a class="text-decoration-none" href="tel:79999999999"><span class="icon-phone-outline"></span>
+                                +7 999 999 9999</a>
+                            <br>
+                            <a class="text-decoration-none" href="mailto:email@email.com"><span class="icon-mail"></span>
+                                email@email.com</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="text-center py-3">
+                <small class="text-black-50">&copy; ООО &laquo;Центр ВТО&raquo;</small>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

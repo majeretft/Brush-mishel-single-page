@@ -1,6 +1,12 @@
 @import "../css/fontello.css";
 @import url('https://fonts.googleapis.com/css?family=Lora|Ruslan+Display&subset=cyrillic');
 
+$b-xl: 1200px;
+$b-lg: 992px;
+$b-md: 768px;
+$b-sm: 576px;
+$col-padding: 15px;
+
 .text-russian-display {
     font-family: 'Ruslan Display', cursive;
 }
@@ -54,14 +60,53 @@
     font-size: 0.8rem;
 }
 
+.bg-svg {
+    background-image: url(../img/header-xl.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 55% 100%;
+}
+
+@media (min-width: $b-lg) {
+    .mod-overlay {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: -60%;
+            left: 5%;
+            background-image: url(../img/metla-mod-sprite.svg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            width: 90%;
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: $b-xl) {
+    .mod-overlay {
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: -45%;
+            background-image: url(../img/metla-mod-sprite.svg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.vr {
+    padding-left: $col-padding;
+    padding-right: $col-padding;
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
 html,
 body {
     min-height: 100vh;
-}
-
-body {
-    background-image: url(../img/header-xl.svg);
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 60% 100%;
 }
