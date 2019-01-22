@@ -66,11 +66,31 @@ body {
     min-height: 100vh;
 }
 
+.bg-svg {
+    background-image: url(../img/header.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+}
+
+@media (max-width: $b-md - 1) {
+    h1, .h1 {
+        font-size: 1.8rem;
+    }
+
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: $b-sm) {
+    .bg-svg {
+        background-size: 100% 45%;
+    }
+}
+
 @media (min-width: $b-md) {
     .bg-svg {
-        background-image: url(../img/header-md.svg);
-        background-position: top center;
-        background-repeat: no-repeat;
         background-size: 100% 45%;
     }
     
@@ -112,17 +132,11 @@ body {
     }
     
     .mod-overlay {
-        position: relative;
         &:after {
-            content: "";
-            position: absolute;
-            top: -60%;
+            top: -25%;
             left: 5%;
-            background-image: url(../img/metla-mod-sprite.svg);
-            background-position: center top;
-            background-repeat: no-repeat;
             width: 90%;
-            height: 100%;
+            background-size: auto 35%;
         }
     }
 }
@@ -143,16 +157,10 @@ body {
     }
 
     .mod-overlay {
-        position: relative;
         &:after {
-            content: "";
-            position: absolute;
-            top: -45%;
-            background-image: url(../img/metla-mod-sprite.svg);
-            background-position: center top;
-            background-repeat: no-repeat;
+            top: -40%;
+            left: 0;
             width: 100%;
-            height: 100%;
         }
     }
 }
